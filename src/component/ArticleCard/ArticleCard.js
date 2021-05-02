@@ -12,7 +12,6 @@ const ArticleCard = ({ id }) => {
                 console.log(err);
             })
     }, [id])
-    console.log(article);
     const { title, time, url, descendants, by} = article
     const milliseconds = time * 1000
     const newTime = format(milliseconds);
@@ -21,7 +20,7 @@ const ArticleCard = ({ id }) => {
             <div className="card">
                 <a href={url} target="blank" style={{ textDecoration: 'none' }}>
                     <div className="cardBody">
-                        <h4>{title}</h4>
+                        <h4 style={{color: 'rgba(0, 0, 0, 0.82)', fontFamily: 'Open Sans'}}>{title}</h4>
                         <p><small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestias odit minus dolore laboriosam voluptate cupiditate rem hic quod architecto?</small></p>
                         <div style={{ display: 'flex' }}>
                             <p><small style={{ borderRight: '1px solid black', paddingRight: '5px' }}>By {by}</small></p>
