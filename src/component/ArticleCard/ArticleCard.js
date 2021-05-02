@@ -10,7 +10,7 @@ const ArticleCard = ({ id }) => {
             .then(data => setArticle(data))
     }, [id])
     console.log(article);
-    const { title, time, url, descendants} = article
+    const { title, time, url, descendants, by} = article
     const milliseconds = time * 1000
     const newTime = format(milliseconds);
     return (
@@ -21,7 +21,8 @@ const ArticleCard = ({ id }) => {
                         <h4>{title}</h4>
                         <p><small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere molestias odit minus dolore laboriosam voluptate cupiditate rem hic quod architecto?</small></p>
                         <div style={{ display: 'flex' }}>
-                            <img style={{ width: '1.5%', paddingRight: '5px' }} src={icon} alt="" />
+                            <p><small style={{ borderRight: '1px solid black', paddingRight: '5px' }}>By {by}</small></p>
+                            <img style={{ width: '18px', paddingRight: '5px', paddingLeft: '5px' }} src={icon} alt="" />
                             <p><small style={{ borderRight: '1px solid black', paddingRight: '5px' }}>{newTime}</small></p>
                             <p><small style={{ paddingLeft: '5px' }}>{descendants} comments</small></p>
                         </div>

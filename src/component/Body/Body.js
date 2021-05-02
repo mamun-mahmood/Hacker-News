@@ -14,8 +14,17 @@ const Body = () => {
     return (
         <div>
             <div className="topBtnContainer">
-                <button onClick={() => setKeyword('newstories')} className="newBtn">New</button>
-                <button onClick={() => setKeyword('topstories')} className="pastBtn">Past</button>
+                <button onClick={() => {
+                    setKeyword('newstories') 
+                    setTo(5)}} className="newBtn">New</button>
+                <button onClick={() => {
+                    setKeyword('topstories')
+                    setTo(5)
+                    }} className="pastBtn">Past</button>
+                <button onClick={() => {
+                    setKeyword('beststories')
+                    setTo(5)
+                    }} className="newBtn">Best</button>
             </div>
             {
                 sliceStories.map(each => <ArticleCard key={each} id={each}></ArticleCard>)
