@@ -8,6 +8,9 @@ const ArticleCard = ({ id }) => {
         fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`)
             .then(res => res.json())
             .then(data => setArticle(data))
+            .catch(err => {
+                console.log(err);
+            })
     }, [id])
     console.log(article);
     const { title, time, url, descendants, by} = article

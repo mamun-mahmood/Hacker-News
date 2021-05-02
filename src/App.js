@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-            <h1><span style={{color: 'rgba(251, 201, 27, 1)'}}>HACKER</span><span>NEWS</span><span style={{color: 'yellow'}}>.</span></h1>
+            <h1><span style={{color: 'rgba(251, 201, 27, 1)'}}>HACKER</span><span style={{color: 'rgba(0, 0, 0, 1)'}}>NEWS</span><span style={{color: 'rgba(251, 201, 27, 1)'}}>.</span></h1>
         </div>
       <Body/>
     </div>
