@@ -1,2 +1,1 @@
-# test
-# Hacker-News
+# Hacker-News-Clone
